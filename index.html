@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Senai</title>
+    <style>
+        body{
+            text-align: center;
+            color: white;
+            background-color: gray;
+        }
+        input{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="numero"/>
+    <input type="submit" id="advinhar" onclick="botaoClicado()" value="Compare com o meu segredo!" />
+    <p><input type="submit" onclick="resultado()" value="Clique aqui para saber o segredo!" />
+    </p>
+    <section id="result">
+        <h2>Suas tentativas:</h2>
+    </section>
+    <script>
+    function botaoClicado(){
+        if(segredo == caixaDoNumero.value){
+            res.innerHTML += ("Parabéns! Você acertou o número secreto= "+segredo+"<hr>")
+        }
+        else{
+            if(segredo>caixaDoNumero.value){
+                res.innerHTML +=(caixaDoNumero.value+ " Você errou! É um número MAIOR!<hr>")
+            }
+            if(segredo<caixaDoNumero.value){
+                res.innerHTML +=(caixaDoNumero.value+ " Você errou! É um número MENOR!<hr>")
+            }
+            if(isNaN(caixaDoNumero.value)){
+                res.innerHTML+= ("<i>Apenas números são válidos!</i><hr>")
+            }
+        }
+    }
+    function resultado(){
+        res.innerHTML += (segredo+"<hr>")
+    }
+        var segredo = Math.round(Math.random()*100)
+        var caixaDoNumero = document.getElementById("numero")
+        var res = document.getElementById("result")
+        
+        
+    </script>
+    <footer>
+        &copy;Ana Caroline Ferreira
+    </footer>
+</body>
+</html>
