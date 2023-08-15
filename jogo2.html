@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="money.ico" type="image/x-icon">
+		<title>Loteria da Carol</title>
+		<style>
+			body{
+				background-color: gold;
+				color: gray;
+				text-align: center;
+			}
+			input{
+				padding: 10px;
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="text-align: center">Loteria da Carol!!</h1>
+		<p>
+			Escolha 6 números entre 1 e 60, e veja se acerta o meu sorteio!!<br>
+			<i>Lembrando que a cada atualização de página, são sorteados seis números diferentes.</i>
+		</p>
+		<input type="submit" onclick="apostar()" value="Apostar!" />
+		<section id="resultado">
+		</section>
+		<hr>
+		<!--<input type="submit" onclick="exibeResultado()" value="Resultado do sorteio" />-->
+		
+		<script>
+			function pulaLinha(){
+				document.write("<hr>")
+			}
+			/*function exibeResultado(){
+				res.innerHTML += "<hr>"+sorteados
+			}*/
+			function apostar(){
+				var chute = []
+				for(i=0;i<6;i++){
+					var tentativa = prompt("Digite um número: ")
+					chute.push(tentativa)
+				}
+				if(chute[0]==sorteados[0]){
+					res.innerHTML += "<hr>Acertou o 1° numero do sorteio!"
+				}
+				if(chute[0]==sorteados[1]){
+					res.innerHTML +="<hr>Acertou o 2° numero do sorteio!"
+				}
+				if(chute[0]==sorteados[2]){
+					res.innerHTML +="<hr>Acertou o 3° numero do sorteio!"
+				}
+				if(chute[0]==sorteados[3]){
+					res.innerHTML +="<hr>Acertou o 4° numero do sorteio!"
+				}
+				if(chute[0]==sorteados[4]){
+					res.innerHTML +="<hr>Acertou o 5° numero do sorteio!"
+				}
+				if(chute[0]==sorteados[5]){
+					res.innerHTML +="<hr>Acertou o 6° numero do sorteio!"
+				}
+				if(chute[1]==sorteados[0]){
+					res.innerHTML +="<hr>Acertou o 1° numero do sorteio!"
+				}
+				if(chute[1]==sorteados[1]){
+					res.innerHTML +="<hr>Acertou o 2° numero do sorteio!"
+				}
+				if(chute[1]==sorteados[2]){
+					res.innerHTML +="<hr>Acertou o 3° numero do sorteio!"
+				}
+				if(chute[1]==sorteados[3]){
+					res.innerHTML +="<hr>Acertou o 4° numero do sorteio!"
+				}
+				if(chute[1]==sorteados[4]){
+					res.innerHTML +="<hr>Acertou o 5° numero do sorteio!"
+				}
+				if(chute[1]==sorteados[5]){
+					res.innerHTML +="<hr>Acertou o 6° numero do sorteio!"
+				}
+				if(chute[2]==sorteados[0]){
+					res.innerHTML +="<hr>Acertou o 1° numero do sorteio!"
+				}
+				if(chute[2]==sorteados[1]){
+					res.innerHTML +="<hr>Acertou o 2° numero do sorteio!"
+				}
+				if(chute[2]==sorteados[2]){
+					res.innerHTML +="<hr>Acertou o 3° numero do sorteio!"
+				}
+				if(chute[2]==sorteados[3]){
+					res.innerHTML +="<hr>Acertou o 4° numero do sorteio!"
+				}
+				if(chute[2]==sorteados[4]){
+					res.innerHTML +="<hr>Acertou o 5° numero do sorteio!"
+				}
+				if(chute[2]==sorteados[5]){
+					res.innerHTML +="<hr>Acertou o 6° numero do sorteio!"
+				}
+				if(chute[3]==sorteados[0]){
+					res.innerHTML +="<hr>Acertou o 1° numero do sorteio!"
+				}
+				if(chute[3]==sorteados[1]){
+					res.innerHTML +="<hr>Acertou o 2° numero do sorteio!"
+				}
+				if(chute[3]==sorteados[2]){
+					res.innerHTML +="<hr>Acertou o 3° numero do sorteio!"
+				}
+				if(chute[3]==sorteados[3]){
+					res.innerHTML +="<hr>Acertou o 4° numero do sorteio!"
+				}
+				if(chute[3]==sorteados[4]){
+					res.innerHTML +="<hr>Acertou o 5° numero do sorteio!"
+				}
+				if(chute[3]==sorteados[5]){
+					res.innerHTML +="<hr>Acertou o 6° numero do sorteio!"
+				}
+				if(chute[4]==sorteados[0]){
+					res.innerHTML +="<hr>Acertou o 1° numero do sorteio!"
+				}
+				if(chute[4]==sorteados[1]){
+					res.innerHTML +="<hr>Acertou o 2° numero do sorteio!"
+				}
+				if(chute[4]==sorteados[2]){
+					res.innerHTML +="<hr>Acertou o 3° numero do sorteio!"
+				}
+				if(chute[4]==sorteados[3]){
+					res.innerHTML +="<hr>Acertou o 4° numero do sorteio!"
+				}
+				if(chute[4]==sorteados[4]){
+					res.innerHTML +="<hr>Acertou o 5° numero do sorteio!"
+				}
+				if(chute[4]==sorteados[5]){
+					res.innerHTML +="<hr>Acertou o 6° numero do sorteio!"
+				}
+				if(chute[5]==sorteados[0]){
+					res.innerHTML +="<hr>Acertou o 1° numero do sorteio!"
+				}
+				if(chute[5]==sorteados[1]){
+					res.innerHTML +="<hr>Acertou o 2° numero do sorteio!"
+				}
+				if(chute[5]==sorteados[2]){
+					res.innerHTML +="<hr>Acertou o 3° numero do sorteio!"
+				}
+				if(chute[5]==sorteados[3]){
+					res.innerHTML +="<hr>Acertou o 4° numero do sorteio!"
+				}
+				if(chute[5]==sorteados[4]){
+					res.innerHTML +="<hr>Acertou o 5° numero do sorteio!"
+				}
+				if(chute[5]==sorteados[5]){
+					res.innerHTML +="<hr>Acertou o 6° numero do sorteio!"
+				}
+				res.innerHTML += "<hr>Você chutou "+chute+" e o sorteio foi: "+sorteados
+			}
+			var res = document.getElementById("resultado")	
+			var sorteados = []
+			while(sorteados.length<6){
+				
+				var numero = Math.round(Math.random()*60)
+				
+				sorteados.push(numero)
+			}		
+		</script>
+	</body>
+	<footer style="text-align: right">
+		<p>
+			<i>&copy; Ana Caroline Ferreira; 2023.</i>
+		</p>
+	</footer>
+</html>
